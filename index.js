@@ -13,7 +13,7 @@ module.exports = {
       var configGenerator = require(configPath);
       const result = configGenerator(env, baseConfig, this);
       
-      console.log(result['ember-modal-dialog']);
+      console.log('ember-modal-dialog attrs: ', result['ember-modal-dialog']);
       return result;
     }
   }
