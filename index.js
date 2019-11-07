@@ -10,7 +10,9 @@ module.exports = {
     var configPath = path.join(this.root, 'config', 'environment.js');
     
     if (fs.existsSync(configPath)) {
+      console.log('exists: ', configPath)
       var configGenerator = require(configPath);
+      console.log('AND we got a GENERATOR yall!')
       try { 
         const result = configGenerator(env, baseConfig, this);      
         console.log('ember-modal-dialog attrs: ', result['ember-modal-dialog']);
