@@ -11,10 +11,13 @@ module.exports = {
     
     if (fs.existsSync(configPath)) {
       var configGenerator = require(configPath);
-      const result = configGenerator(env, baseConfig, this);
-      
-      console.log('ember-modal-dialog attrs: ', result['ember-modal-dialog']);
-      return result;
+      try { 
+        const result = configGenerator(env, baseConfig, this);      
+        console.log('ember-modal-dialog attrs: ', result['ember-modal-dialog']);
+        return result;
+      } catch(e) {
+        throw e;      
+      }
     }
   }
 
