@@ -16,6 +16,7 @@ module.exports = {
         console.log('ember-modal-dialog attrs: ', result['ember-modal-dialog']);
         return result;
       } catch(e) {
+        console.log("error = ", e)
         throw e;      
       }
     }
