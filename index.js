@@ -6,6 +6,10 @@ var path = require('path');
 
 module.exports = {
   name: 'ember-modal-dialog',
+  init() {
+    console.log('[ember-modal-dialog] init');
+    this._super.init && this._super.init.apply(this, arguments);
+  },
   config: function (env, baseConfig) {
     console.log('[ember-modal-dialog]');
     
